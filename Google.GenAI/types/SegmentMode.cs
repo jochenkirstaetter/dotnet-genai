@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum that represents the segmentation mode.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<SegmentMode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum SegmentMode {
     /// <summary>
     ///

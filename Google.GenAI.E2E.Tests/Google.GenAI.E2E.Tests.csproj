@@ -2,7 +2,7 @@
 
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
@@ -35,19 +35,19 @@
   <Target Name="CopyTestServerFile" AfterTargets="Build">
     <Copy SourceFiles="test-server.yml" DestinationFolder="$(OutputPath)/../" />
   </Target>
-  <!-- Updated Target to copy Recordings to bin/Debug/Recordings -->
+  <!-- Updated Target to copy Recordings to bin/Recordings so it's accessible from net6.0 and net8.0 subdirectories -->
   <Target Name="CopyRecordingsToOutput" AfterTargets="Build">
     <ItemGroup>
       <RecordingFiles Include="Recordings/**/*" />
       <TestAssetFiles Include="TestAssets/**/*" />
     </ItemGroup>
-    <Copy SourceFiles="@(RecordingFiles)" DestinationFolder="$(OutputPath)/../Recordings/%(RecursiveDir)" />
+    <Copy SourceFiles="@(RecordingFiles)" DestinationFolder="$(OutputPath)/../../Recordings/%(RecursiveDir)" />
     <Copy SourceFiles="@(TestAssetFiles)" DestinationFolder="$(OutputPath)/TestAssets/%(RecursiveDir)" />
   </Target>
   <Target Name="CopyRecordings" AfterTargets="VSTest">
     <ItemGroup>
-      <RecordingFiles Include="$(OutputPath)/../Recordings/**/*.json" />
-      <RecordingFiles Include="$(OutputPath)/../Recordings/**/*.websocket.log" />
+      <RecordingFiles Include="$(OutputPath)/../../Recordings/**/*.json" />
+      <RecordingFiles Include="$(OutputPath)/../../Recordings/**/*.websocket.log" />
     </ItemGroup>
     <Copy SourceFiles="@(RecordingFiles)" DestinationFolder="$(MSBuildProjectDirectory)/Recordings" />
   </Target>

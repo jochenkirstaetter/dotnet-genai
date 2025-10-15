@@ -25,7 +25,7 @@ public class TestServer {
     string _apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
     var options = new TestServerOptions {
       ConfigPath = Path.GetFullPath("../test-server.yml"),
-      RecordingDir = Path.GetFullPath("../Recordings"),
+      RecordingDir = Path.GetFullPath("../../Recordings"),
       Mode = System.Environment.GetEnvironmentVariable("TEST_MODE") ?? "replay",
       BinaryPath = Path.GetFullPath("./test-server"), TestServerSecrets = $"{_project},{_apiKey}"
     };
