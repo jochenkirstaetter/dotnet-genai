@@ -370,3 +370,34 @@ public class EditImageSimple {
   }
 }
 ```
+
+### Segment Image
+
+Segment image is only supported in the Vertex AI client.
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class SegmentImageSimple {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var segmentImageConfig = new SegmentImageConfig {
+      Mode = SegmentMode.BACKGROUND,
+      MaxPredictions = 1,
+    };
+
+    var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
+        model: modelName,
+        source: new SegmentImageSource {
+          Image = Image.FromFile("path/to/image.png", "image/png"),
+        },
+        config: segmentImageConfig);
+
+    // Do something with the generated mask
+    var mask = segmentImageResponse.GeneratedMasks.First().Mask;
+  }
+}
+```

@@ -1224,6 +1224,25 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode GeneratedImageMaskFromVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "_self" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mask" },
+            ImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
+                                Common.GetValueByPath(fromObject, new string[] { "_self" }))),
+                            toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode GoogleMapsToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1520,6 +1539,131 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "threshold" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "threshold" },
                               Common.GetValueByPath(fromObject, new string[] { "threshold" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ScribbleImageToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "image" },
+            ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
+                              Common.GetValueByPath(fromObject, new string[] { "image" }))),
+                          toObject));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode SegmentImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "mode" },
+                              Common.GetValueByPath(fromObject, new string[] { "mode" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maxPredictions" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "maxPredictions" },
+                              Common.GetValueByPath(fromObject, new string[] { "maxPredictions" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "confidenceThreshold" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "confidenceThreshold" },
+            Common.GetValueByPath(fromObject, new string[] { "confidenceThreshold" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maskDilation" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "maskDilation" },
+                              Common.GetValueByPath(fromObject, new string[] { "maskDilation" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "binaryColorThreshold" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "binaryColorThreshold" },
+            Common.GetValueByPath(fromObject, new string[] { "binaryColorThreshold" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode SegmentImageParametersToVertex(ApiClient apiClient, JsonNode fromObject,
+                                                     JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "_url", "model" },
+            Transformers.TModel(this._apiClient,
+                                Common.GetValueByPath(fromObject, new string[] { "model" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
+        _ = SegmentImageSourceToVertex(
+            JsonNode.Parse(JsonSerializer.Serialize(
+                Common.GetValueByPath(fromObject, new string[] { "source" }))),
+            toObject);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
+        _ = SegmentImageConfigToVertex(
+            JsonNode.Parse(JsonSerializer.Serialize(
+                Common.GetValueByPath(fromObject, new string[] { "config" }))),
+            toObject);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode SegmentImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "predictions" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "predictions" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(GeneratedImageMaskFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                                  toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "generatedMasks" }, result);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode SegmentImageSourceToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "prompt" },
+                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "instances[0]", "image" },
+            ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
+                              Common.GetValueByPath(fromObject, new string[] { "image" }))),
+                          toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "scribbleImage" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "instances[0]", "scribble" },
+            ScribbleImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "scribbleImage" }))),
+                                  toObject));
       }
 
       return toObject;
@@ -2062,6 +2206,63 @@ namespace Google.GenAI {
       return JsonSerializer.Deserialize<UpscaleImageResponse>(responseNode.ToString()) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<UpscaleImageResponse>.");
+    }
+
+    public async Task<SegmentImageResponse> SegmentImageAsync(string model,
+                                                              SegmentImageSource source,
+                                                              SegmentImageConfig config) {
+      SegmentImageParameters parameter = new SegmentImageParameters();
+
+      if (!Common.IsZero(model)) {
+        parameter.Model = model;
+      }
+      if (!Common.IsZero(source)) {
+        parameter.Source = source;
+      }
+      if (!Common.IsZero(config)) {
+        parameter.Config = config;
+      }
+      string jsonString = JsonSerializer.Serialize(parameter);
+      JsonNode? parameterNode = JsonNode.Parse(jsonString);
+      if (parameterNode == null) {
+        throw new NotSupportedException("Failed to parse SegmentImageParameters to JsonNode.");
+      }
+
+      JsonNode body;
+      string path;
+      if (this._apiClient.VertexAI) {
+        body = SegmentImageParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        path = Common.FormatMap("{model}:predict", body["_url"]);
+      } else {
+        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+      }
+      JsonObject? bodyObj = body?.AsObject();
+      bodyObj?.Remove("_url");
+      // TODO: Handle "_query" in the body (for list support).
+      bodyObj?.Remove("_query");
+      HttpOptions? requestHttpOptions = config?.HttpOptions;
+
+      ApiResponse response = await this._apiClient.RequestAsync(
+          HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
+      HttpContent httpContent = response.GetEntity();
+      string contentString = await httpContent.ReadAsStringAsync();
+      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      if (httpContentNode == null) {
+        throw new NotSupportedException("Failed to parse response to JsonNode.");
+      }
+      JsonNode responseNode = httpContentNode;
+
+      if (this._apiClient.VertexAI) {
+        responseNode = SegmentImageResponseFromVertex(httpContentNode, new JsonObject());
+      }
+
+      if (!this._apiClient.VertexAI) {
+        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+      }
+
+      return JsonSerializer.Deserialize<SegmentImageResponse>(responseNode.ToString()) ??
+             throw new InvalidOperationException(
+                 "Failed to deserialize Task<SegmentImageResponse>.");
     }
 
     /// <summary>
