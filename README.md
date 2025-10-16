@@ -6,7 +6,7 @@ APIs.
 
 ## Supported .NET version
 
-This library is built for and requires .NET 8.0 or a later compatible version.
+This library is built for .NET 8.0 and netstandard2.1.
 
 ## Full API Reference
 
