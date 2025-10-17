@@ -238,7 +238,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("thinkingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GenerationConfigThinkingConfig
+    public ThinkingConfig
         ? ThinkingConfig {
             get; set;
           }
@@ -260,6 +260,16 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
         ? TopP {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Enables enhanced civic answers. It may not be available for all models.
+    /// </summary>
+    [JsonPropertyName("enableEnhancedCivicAnswers")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? EnableEnhancedCivicAnswers {
             get; set;
           }
 

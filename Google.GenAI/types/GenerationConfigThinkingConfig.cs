@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-// Auto-generated code. Do not edit.
-
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -26,25 +24,11 @@ namespace Google.GenAI.Types {
   /// Config for thinking features.
   /// </summary>
 
-  public record GenerationConfigThinkingConfig {
-    /// <summary>
-    /// Optional. Indicates whether to include thoughts in the response. If true, thoughts are
-    /// returned only when available.
-    /// </summary>
-    [JsonPropertyName("includeThoughts")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? IncludeThoughts { get; set; }
-
-    /// <summary>
-    /// Optional. Indicates the thinking budget in tokens.
-    /// </summary>
-    [JsonPropertyName("thinkingBudget")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int
-        ? ThinkingBudget {
-            get; set;
-          }
-
+  /// <summary>
+  /// Config for thinking feature.
+  /// </summary>
+  [Obsolete("This record will be deprecated. Please use ThinkingConfig instead.", error: false)]
+  public record GenerationConfigThinkingConfig : ThinkingConfig {
     /// <summary>
     /// Deserializes a JSON string to a GenerationConfigThinkingConfig object.
     /// </summary>
@@ -52,8 +36,7 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GenerationConfigThinkingConfig object, or null if deserialization
     /// fails.</returns>
-    public static GenerationConfigThinkingConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    public static new GenerationConfigThinkingConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
         return JsonSerializer.Deserialize<GenerationConfigThinkingConfig>(jsonString, options);
       } catch (JsonException e) {

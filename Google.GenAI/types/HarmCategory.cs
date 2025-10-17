@@ -30,24 +30,24 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("HARM_CATEGORY_UNSPECIFIED")] HARM_CATEGORY_UNSPECIFIED,
 
     /// <summary>
-    /// The harm category is hate speech.
-    /// </summary>
-    [JsonPropertyName("HARM_CATEGORY_HATE_SPEECH")] HARM_CATEGORY_HATE_SPEECH,
-
-    /// <summary>
-    /// The harm category is dangerous content.
-    /// </summary>
-    [JsonPropertyName("HARM_CATEGORY_DANGEROUS_CONTENT")] HARM_CATEGORY_DANGEROUS_CONTENT,
-
-    /// <summary>
     /// The harm category is harassment.
     /// </summary>
     [JsonPropertyName("HARM_CATEGORY_HARASSMENT")] HARM_CATEGORY_HARASSMENT,
 
     /// <summary>
+    /// The harm category is hate speech.
+    /// </summary>
+    [JsonPropertyName("HARM_CATEGORY_HATE_SPEECH")] HARM_CATEGORY_HATE_SPEECH,
+
+    /// <summary>
     /// The harm category is sexually explicit content.
     /// </summary>
     [JsonPropertyName("HARM_CATEGORY_SEXUALLY_EXPLICIT")] HARM_CATEGORY_SEXUALLY_EXPLICIT,
+
+    /// <summary>
+    /// The harm category is dangerous content.
+    /// </summary>
+    [JsonPropertyName("HARM_CATEGORY_DANGEROUS_CONTENT")] HARM_CATEGORY_DANGEROUS_CONTENT,
 
     /// <summary>
     /// Deprecated: Election filter is not longer supported. The harm category is civic integrity.

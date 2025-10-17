@@ -260,6 +260,12 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "topP" }));
       }
 
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
+        throw new NotSupportedException(
+            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
+      }
+
       return toObject;
     }
 
