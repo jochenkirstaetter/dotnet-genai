@@ -74,6 +74,11 @@ namespace Google.GenAI.Types {
     /// The harm category is image sexually explicit content.
     /// </summary>
     [JsonPropertyName(
-        "HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT")] HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT
+        "HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT")] HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT,
+
+    /// <summary>
+    /// The harm category is for jailbreak prompts.
+    /// </summary>
+    [JsonPropertyName("HARM_CATEGORY_JAILBREAK")] HARM_CATEGORY_JAILBREAK
   }
 }

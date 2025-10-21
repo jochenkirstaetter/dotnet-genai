@@ -20,38 +20,49 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Blocked reason.
+  /// Output only. The reason why the prompt was blocked.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum BlockedReason {
     /// <summary>
-    /// Unspecified blocked reason.
+    /// The blocked reason is unspecified.
     /// </summary>
     [JsonPropertyName("BLOCKED_REASON_UNSPECIFIED")] BLOCKED_REASON_UNSPECIFIED,
 
     /// <summary>
-    /// Candidates blocked due to safety.
+    /// The prompt was blocked for safety reasons.
     /// </summary>
     [JsonPropertyName("SAFETY")] SAFETY,
 
     /// <summary>
-    /// Candidates blocked due to other reason.
+    /// The prompt was blocked for other reasons. For example, it may be due to the prompt's
+    /// language, or because it contains other harmful content.
     /// </summary>
     [JsonPropertyName("OTHER")] OTHER,
 
     /// <summary>
-    /// Candidates blocked due to the terms which are included from the terminology blocklist.
+    /// The prompt was blocked because it contains a term from the terminology blocklist.
     /// </summary>
     [JsonPropertyName("BLOCKLIST")] BLOCKLIST,
 
     /// <summary>
-    /// Candidates blocked due to prohibited content.
+    /// The prompt was blocked because it contains prohibited content.
     /// </summary>
     [JsonPropertyName("PROHIBITED_CONTENT")] PROHIBITED_CONTENT,
 
     /// <summary>
-    /// Candidates blocked due to unsafe image generation content.
+    /// The prompt was blocked because it contains content that is unsafe for image generation.
     /// </summary>
-    [JsonPropertyName("IMAGE_SAFETY")] IMAGE_SAFETY
+    [JsonPropertyName("IMAGE_SAFETY")] IMAGE_SAFETY,
+
+    /// <summary>
+    /// The prompt was blocked by Model Armor.
+    /// </summary>
+    [JsonPropertyName("MODEL_ARMOR")] MODEL_ARMOR,
+
+    /// <summary>
+    /// The prompt was blocked as a jailbreak attempt.
+    /// </summary>
+    [JsonPropertyName("JAILBREAK")] JAILBREAK
   }
 }

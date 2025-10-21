@@ -23,19 +23,20 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Content filter results for a prompt sent in the request.
+  /// Content filter results for a prompt sent in the request. Note: This is sent only in the first
+  /// stream chunk and only if no candidates were generated due to content violations.
   /// </summary>
 
   public record GenerateContentResponsePromptFeedback {
     /// <summary>
-    /// Output only. Blocked reason.
+    /// Output only. The reason why the prompt was blocked.
     /// </summary>
     [JsonPropertyName("blockReason")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public BlockedReason ? BlockReason { get; set; }
 
     /// <summary>
-    /// Output only. A readable block reason message.
+    /// Output only. A readable message that explains the reason why the prompt was blocked.
     /// </summary>
     [JsonPropertyName("blockReasonMessage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Safety ratings.
+    /// Output only. A list of safety ratings for the prompt. There is one rating per category.
     /// </summary>
     [JsonPropertyName("safetyRatings")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
