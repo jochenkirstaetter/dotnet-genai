@@ -35,7 +35,8 @@ namespace Google.GenAI.Types {
     public ModelSelectionConfig ? ModelSelectionConfig { get; set; }
 
     /// <summary>
-    /// Optional. If enabled, audio timestamp will be included in the request to the model.
+    /// Optional. If enabled, audio timestamp will be included in the request to the model. This
+    /// field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("audioTimestamp")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -56,6 +57,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
+    /// This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("enableAffectiveDialog")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -183,7 +185,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Routing configuration.
+    /// Optional. Routing configuration. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("routingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -264,7 +266,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Enables enhanced civic answers. It may not be available for all models.
+    /// Optional. Enables enhanced civic answers. It may not be available for all models. This field
+    /// is not supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("enableEnhancedCivicAnswers")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

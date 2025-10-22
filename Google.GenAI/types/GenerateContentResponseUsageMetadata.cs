@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Usage metadata about response(s).
+  /// Usage metadata about response(s). This data type is not supported in Gemini API.
   /// </summary>
 
   public record GenerateContentResponseUsageMetadata {

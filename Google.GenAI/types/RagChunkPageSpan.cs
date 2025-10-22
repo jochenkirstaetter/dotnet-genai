@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Represents where the chunk starts and ends in the document.
+  /// Represents where the chunk starts and ends in the document. This data type is not supported in
+  /// Gemini API.
   /// </summary>
 
   public record RagChunkPageSpan {

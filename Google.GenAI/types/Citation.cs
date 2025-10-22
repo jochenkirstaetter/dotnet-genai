@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Source attributions for content.
+  /// Source attributions for content. This data type is not supported in Gemini API.
   /// </summary>
 
   public record Citation {

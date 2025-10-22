@@ -24,7 +24,8 @@ using Google.GenAI.Serialization;
 namespace Google.GenAI.Types {
   /// <summary>
   /// Retrieve from data source powered by external API for grounding. The external API is not owned
-  /// by Google, but need to follow the pre-defined API spec.
+  /// by Google, but need to follow the pre-defined API spec. This data type is not supported in
+  /// Gemini API.
   /// </summary>
 
   public record ExternalApi {

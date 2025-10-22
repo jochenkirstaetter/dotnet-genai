@@ -37,7 +37,7 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to
     /// get external knowledge to answer the prompt. Retrieval results are presented to the model
-    /// for generation.
+    /// for generation. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("retrieval")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

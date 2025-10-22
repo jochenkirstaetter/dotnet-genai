@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// When manual routing is set, the specified model will be used directly.
+  /// When manual routing is set, the specified model will be used directly. This data type is not
+  /// supported in Gemini API.
   /// </summary>
 
   public record GenerationConfigRoutingConfigManualRoutingMode {

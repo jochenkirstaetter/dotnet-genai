@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for Google Service Account Authentication.
+  /// Config for Google Service Account Authentication. This data type is not supported in Gemini
+  /// API.
   /// </summary>
 
   public record AuthConfigGoogleServiceAccountConfig {

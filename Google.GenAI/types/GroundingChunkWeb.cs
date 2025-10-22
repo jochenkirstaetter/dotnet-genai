@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record GroundingChunkWeb {
     /// <summary>
-    /// Domain of the (original) URI.
+    /// Domain of the (original) URI. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("domain")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

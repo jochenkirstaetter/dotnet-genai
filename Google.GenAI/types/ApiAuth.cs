@@ -24,7 +24,8 @@ using Google.GenAI.Serialization;
 namespace Google.GenAI.Types {
   /// <summary>
   /// The generic reusable api auth config. Deprecated. Please use AuthConfig
-  /// (google/cloud/aiplatform/master/auth.proto) instead.
+  /// (google/cloud/aiplatform/master/auth.proto) instead. This data type is not supported in Gemini
+  /// API.
   /// </summary>
 
   public record ApiAuth {

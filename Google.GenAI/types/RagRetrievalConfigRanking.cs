@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for ranking and reranking.
+  /// Config for ranking and reranking. This data type is not supported in Gemini API.
   /// </summary>
 
   public record RagRetrievalConfigRanking {

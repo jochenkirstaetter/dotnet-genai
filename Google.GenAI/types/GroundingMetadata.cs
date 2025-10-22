@@ -30,7 +30,7 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Optional. Output only. Resource name of the Google Maps widget context token to be used with
     /// the PlacesContextElement widget to render contextual data. This is populated only for Google
-    /// Maps grounding.
+    /// Maps grounding. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("googleMapsWidgetContextToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -67,7 +67,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Queries executed by the retrieval tools.
+    /// Optional. Queries executed by the retrieval tools. This field is not supported in Gemini
+    /// API.
     /// </summary>
     [JsonPropertyName("retrievalQueries")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -88,7 +89,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. Output only. List of source flagging uris. This is currently populated only for
-    /// Google Maps grounding.
+    /// Google Maps grounding. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("sourceFlaggingUris")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

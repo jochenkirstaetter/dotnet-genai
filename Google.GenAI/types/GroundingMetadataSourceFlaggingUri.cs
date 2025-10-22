@@ -24,7 +24,7 @@ using Google.GenAI.Serialization;
 namespace Google.GenAI.Types {
   /// <summary>
   /// Source content flagging uri for a place or review. This is currently populated only for Google
-  /// Maps grounding.
+  /// Maps grounding. This data type is not supported in Gemini API.
   /// </summary>
 
   public record GroundingMetadataSourceFlaggingUri {

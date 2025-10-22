@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The API secret.
+  /// The API secret. This data type is not supported in Gemini API.
   /// </summary>
 
   public record ApiAuthApiKeyConfig {

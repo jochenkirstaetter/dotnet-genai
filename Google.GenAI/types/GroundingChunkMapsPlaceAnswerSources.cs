@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Sources used to generate the place answer.
+  /// Sources used to generate the place answer. This data type is not supported in Gemini API.
   /// </summary>
 
   public record GroundingChunkMapsPlaceAnswerSources {

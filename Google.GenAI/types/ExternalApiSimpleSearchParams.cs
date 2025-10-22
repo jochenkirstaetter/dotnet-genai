@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The search parameters to use for SIMPLE_SEARCH spec.
+  /// The search parameters to use for SIMPLE_SEARCH spec. This data type is not supported in Gemini
+  /// API.
   /// </summary>
 
   public record ExternalApiSimpleSearchParams {

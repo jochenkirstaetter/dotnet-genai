@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for user OIDC auth.
+  /// Config for user OIDC auth. This data type is not supported in Gemini API.
   /// </summary>
 
   public record AuthConfigOidcConfig {

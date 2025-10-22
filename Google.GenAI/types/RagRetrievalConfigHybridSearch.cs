@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for Hybrid Search.
+  /// Config for Hybrid Search. This data type is not supported in Gemini API.
   /// </summary>
 
   public record RagRetrievalConfigHybridSearch {

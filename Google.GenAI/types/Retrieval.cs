@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Defines a retrieval tool that model can call to access external knowledge.
+  /// Defines a retrieval tool that model can call to access external knowledge. This data type is
+  /// not supported in Gemini API.
   /// </summary>
 
   public record Retrieval {

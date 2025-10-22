@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Chunk from context retrieved by the retrieval tools.
+  /// Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini
+  /// API.
   /// </summary>
 
   public record GroundingChunkRetrievedContext {

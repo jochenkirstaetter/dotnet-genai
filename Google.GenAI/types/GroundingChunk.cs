@@ -28,14 +28,15 @@ namespace Google.GenAI.Types {
 
   public record GroundingChunk {
     /// <summary>
-    /// Grounding chunk from Google Maps.
+    /// Grounding chunk from Google Maps. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("maps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GroundingChunkMaps ? Maps { get; set; }
 
     /// <summary>
-    /// Grounding chunk from context retrieved by the retrieval tools.
+    /// Grounding chunk from context retrieved by the retrieval tools. This field is not supported
+    /// in Gemini API.
     /// </summary>
     [JsonPropertyName("retrievedContext")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

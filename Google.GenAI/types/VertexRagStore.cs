@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Retrieve from Vertex RAG Store for grounding.
+  /// Retrieve from Vertex RAG Store for grounding. This data type is not supported in Gemini API.
   /// </summary>
 
   public record VertexRagStore {

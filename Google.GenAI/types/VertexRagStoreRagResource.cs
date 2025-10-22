@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The definition of the Rag resource.
+  /// The definition of the Rag resource. This data type is not supported in Gemini API.
   /// </summary>
 
   public record VertexRagStoreRagResource {

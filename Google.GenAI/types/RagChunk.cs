@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A RagChunk includes the content of a chunk of a RagFile, and associated metadata.
+  /// A RagChunk includes the content of a chunk of a RagFile, and associated metadata. This data
+  /// type is not supported in Gemini API.
   /// </summary>
 
   public record RagChunk {

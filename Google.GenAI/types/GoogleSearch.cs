@@ -37,7 +37,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. List of domains to be excluded from the search results. The default limit is 2000
-    /// domains. Example: ["amazon.com", "facebook.com"].
+    /// domains. Example: ["amazon.com", "facebook.com"]. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("excludeDomains")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

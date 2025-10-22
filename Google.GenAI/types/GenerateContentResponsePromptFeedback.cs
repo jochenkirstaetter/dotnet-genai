@@ -36,7 +36,8 @@ namespace Google.GenAI.Types {
     public BlockedReason ? BlockReason { get; set; }
 
     /// <summary>
-    /// Output only. A readable message that explains the reason why the prompt was blocked.
+    /// Output only. A readable message that explains the reason why the prompt was blocked. This
+    /// field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("blockReasonMessage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

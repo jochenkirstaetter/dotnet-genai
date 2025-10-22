@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for routing the request to a specific model.
+  /// The configuration for routing the request to a specific model. This data type is not supported
+  /// in Gemini API.
   /// </summary>
 
   public record GenerationConfigRoutingConfig {

@@ -56,12 +56,13 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("IMAGE_SAFETY")] IMAGE_SAFETY,
 
     /// <summary>
-    /// The prompt was blocked by Model Armor.
+    /// The prompt was blocked by Model Armor. This enum value is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("MODEL_ARMOR")] MODEL_ARMOR,
 
     /// <summary>
-    /// The prompt was blocked as a jailbreak attempt.
+    /// The prompt was blocked as a jailbreak attempt. This enum value is not supported in Gemini
+    /// API.
     /// </summary>
     [JsonPropertyName("JAILBREAK")] JAILBREAK
   }

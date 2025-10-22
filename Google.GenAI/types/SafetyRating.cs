@@ -67,7 +67,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Harm probability score.
+    /// Output only. Harm probability score. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("probabilityScore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -87,7 +87,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Harm severity score.
+    /// Output only. Harm severity score. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("severityScore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

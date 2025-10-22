@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for LlmRanker.
+  /// Config for LlmRanker. This data type is not supported in Gemini API.
   /// </summary>
 
   public record RagRetrievalConfigRankingLlmRanker {

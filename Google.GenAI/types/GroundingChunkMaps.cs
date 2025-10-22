@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Chunk from Google Maps.
+  /// Chunk from Google Maps. This data type is not supported in Gemini API.
   /// </summary>
 
   public record GroundingChunkMaps {
