@@ -5,12 +5,12 @@
   "include-v-in-tag": true,
   "pull-request-header": "Auto-generated release PR: merge to trigger a release",
   "packages": {
-    "Google.GenAI": {
+    ".": {
       "component": "Google.GenAI",
       "extra-files": [
         {
           "type": "xml",
-          "path": "../ReleaseVersion.xml",
+          "path": "ReleaseVersion.xml",
           "xpath": "//Project/PropertyGroup/Version"
         }
       ],
