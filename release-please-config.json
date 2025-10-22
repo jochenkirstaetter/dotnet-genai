@@ -10,7 +10,7 @@
       "extra-files": [
         {
           "type": "xml",
-          "path": "ReleaseVersion.xml",
+          "path": "../ReleaseVersion.xml",
           "xpath": "//Project/PropertyGroup/Version"
         }
       ],
