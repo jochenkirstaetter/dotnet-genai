@@ -21,6 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
+using System.IO;
+
 namespace Google.GenAI.Types {
   /// <summary>
   /// An image.
@@ -71,7 +73,11 @@ namespace Google.GenAI.Types {
       }
     }
 
-    public static Image FromFile(string location, string mimeType) {
+    public static Image FromFile(string location, string? mimeType = null) {
+      if (mimeType == null && MimeTypes.TryGetMimeType(location, out var mimeTypeInferred)) {
+        mimeType = mimeTypeInferred;
+      }
+
       try {
         return new Image {
           ImageBytes = File.ReadAllBytes(location),

@@ -82,7 +82,7 @@ public class EditImageTest {
 
     // Raw reference image
     var rawReferenceImage = new RawReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/google_small.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/google_small.png"),
       ReferenceId = 1,
     };
     referenceImages.Add(rawReferenceImage);
@@ -129,14 +129,14 @@ public class EditImageTest {
 
     // Raw reference image
     var rawReferenceImage = new RawReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/google_small.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/google_small.png"),
       ReferenceId = 1,
     };
     referenceImages.Add(rawReferenceImage);
 
     // Mask reference image
     var maskReferenceImage = new MaskReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/checkerboard.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/checkerboard.png"),
       ReferenceId = 2,
       Config =
           new MaskReferenceConfig {
@@ -168,14 +168,14 @@ public class EditImageTest {
 
     // Raw reference image
     var rawReferenceImage = new RawReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/google_small.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/google_small.png"),
       ReferenceId = 1,
     };
     referenceImages.Add(rawReferenceImage);
 
     // Control reference image
     var controlReferenceImage = new ControlReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/checkerboard.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/checkerboard.png"),
       ReferenceId = 2,
       Config =
           new ControlReferenceConfig {
@@ -206,7 +206,7 @@ public class EditImageTest {
 
     // Style reference image
     var styleReferenceImage = new StyleReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/google_small.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/google_small.png"),
       ReferenceId = 1,
       Config =
           new StyleReferenceConfig {
@@ -236,7 +236,7 @@ public class EditImageTest {
 
     // Subject reference image
     var subjectReferenceImage = new SubjectReferenceImage {
-      ReferenceImage = Image.FromFile("TestAssets/google_small.png", "image/png"),
+      ReferenceImage = Image.FromFile("TestAssets/google_small.png"),
       ReferenceId = 1,
       Config =
           new SubjectReferenceConfig {

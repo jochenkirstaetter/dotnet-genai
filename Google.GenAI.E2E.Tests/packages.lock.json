@@ -31,6 +31,12 @@
           "System.Reflection.Metadata": "6.0.1"
         }
       },
+      "MimeTypes": {
+        "type": "Direct",
+        "requested": "[2.5.2, )",
+        "resolved": "2.5.2",
+        "contentHash": "vm4xrNt+i6OVRQ8vhfCcmDIUg3qvjyCTkSTNVTDFohsG6CXEpMaVFkidECL6yRYpHDnz4TqXhDoEQAcnHCu/tw=="
+      },
       "Moq": {
         "type": "Direct",
         "requested": "[4.20.70, )",
@@ -1046,6 +1052,12 @@
           "Mono.Cecil": "0.11.5",
           "System.Reflection.Metadata": "6.0.1"
         }
+      },
+      "MimeTypes": {
+        "type": "Direct",
+        "requested": "[2.5.2, )",
+        "resolved": "2.5.2",
+        "contentHash": "vm4xrNt+i6OVRQ8vhfCcmDIUg3qvjyCTkSTNVTDFohsG6CXEpMaVFkidECL6yRYpHDnz4TqXhDoEQAcnHCu/tw=="
       },
       "Moq": {
         "type": "Direct",

@@ -26,6 +26,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MimeTypes">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="System.Net.WebSockets.Client" />
     <PackageReference Include="Google.Apis.Auth" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
@@ -38,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="/"/>
+    <None Include="README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 
 </Project>

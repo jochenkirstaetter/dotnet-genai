@@ -13,6 +13,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="MimeTypes">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="TestServerSdk" />
     <ProjectReference Include="..\Google.GenAI\Google.GenAI.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

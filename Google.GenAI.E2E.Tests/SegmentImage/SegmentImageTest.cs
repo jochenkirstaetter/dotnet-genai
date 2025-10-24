@@ -85,7 +85,7 @@ public class SegmentImageTest {
       await geminiClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/google.png", "image/png"),
+          Image = Image.FromFile("TestAssets/google.png"),
         },
         config: segmentImageConfig);
     });
@@ -107,7 +107,7 @@ public class SegmentImageTest {
     var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/google.png", "image/png"),
+          Image = Image.FromFile("TestAssets/google.png"),
         },
         config: segmentImageConfig);
 
@@ -126,7 +126,7 @@ public class SegmentImageTest {
     var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/google.png", "image/png"),
+          Image = Image.FromFile("TestAssets/google.png"),
         },
         config: segmentImageConfig);
 
@@ -145,7 +145,7 @@ public class SegmentImageTest {
     var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/google.png", "image/png"),
+          Image = Image.FromFile("TestAssets/google.png"),
           Prompt = "The letter G",
         },
         config: segmentImageConfig);
@@ -165,7 +165,7 @@ public class SegmentImageTest {
     var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/skateboard_stop_sign.jpg", "image/jpeg"),
+          Image = Image.FromFile("TestAssets/skateboard_stop_sign.jpg"),
           Prompt = "skateboard",
         },
         config: segmentImageConfig);
@@ -185,9 +185,9 @@ public class SegmentImageTest {
     var segmentImageResponse = await vertexClient.Models.SegmentImageAsync(
         model: modelName,
         source: new SegmentImageSource {
-          Image = Image.FromFile("TestAssets/skateboard_stop_sign.jpg", "image/jpeg"),
+          Image = Image.FromFile("TestAssets/skateboard_stop_sign.jpg"),
           ScribbleImage = new ScribbleImage {
-            Image = Image.FromFile("TestAssets/segmentation_scribble.jpg", "image/jpeg"),
+            Image = Image.FromFile("TestAssets/segmentation_scribble.jpg"),
           },
         },
         config: segmentImageConfig);

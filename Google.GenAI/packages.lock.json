@@ -13,6 +13,12 @@
           "System.Management": "7.0.2"
         }
       },
+      "MimeTypes": {
+        "type": "Direct",
+        "requested": "[2.5.2, )",
+        "resolved": "2.5.2",
+        "contentHash": "vm4xrNt+i6OVRQ8vhfCcmDIUg3qvjyCTkSTNVTDFohsG6CXEpMaVFkidECL6yRYpHDnz4TqXhDoEQAcnHCu/tw=="
+      },
       "System.Collections.Immutable": {
         "type": "Direct",
         "requested": "[8.0.0, )",
@@ -855,6 +861,12 @@
           "Google.Apis.Core": "1.69.0",
           "System.Management": "7.0.2"
         }
+      },
+      "MimeTypes": {
+        "type": "Direct",
+        "requested": "[2.5.2, )",
+        "resolved": "2.5.2",
+        "contentHash": "vm4xrNt+i6OVRQ8vhfCcmDIUg3qvjyCTkSTNVTDFohsG6CXEpMaVFkidECL6yRYpHDnz4TqXhDoEQAcnHCu/tw=="
       },
       "System.Net.WebSockets.Client": {
         "type": "Direct",
