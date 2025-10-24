@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to search public web data, powered by Vertex AI Search and Sec4 compliance.
+  /// Tool to search public web data, powered by Vertex AI Search and Sec4 compliance. This data
+  /// type is not supported in Gemini API.
   /// </summary>
 
   public record EnterpriseWebSearch {

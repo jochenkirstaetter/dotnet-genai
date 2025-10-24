@@ -23,26 +23,26 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to support Google Search in Model. Powered by Google.
+  /// GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
   /// </summary>
 
   public record GoogleSearch {
-    /// <summary>
-    /// Optional. Filter search results to a specific time range. If customers set a start time,
-    /// they must set an end time (and vice versa).
-    /// </summary>
-    [JsonPropertyName("timeRangeFilter")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Interval ? TimeRangeFilter { get; set; }
-
     /// <summary>
     /// Optional. List of domains to be excluded from the search results. The default limit is 2000
     /// domains. Example: ["amazon.com", "facebook.com"]. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("excludeDomains")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string>
-        ? ExcludeDomains {
+    public List<string> ? ExcludeDomains { get; set; }
+
+    /// <summary>
+    /// Optional. Filter search results to a specific time range. If customers set a start time,
+    /// they must set an end time (and vice versa). This field is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("timeRangeFilter")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Interval
+        ? TimeRangeFilter {
             get; set;
           }
 

@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to support URL context retrieval.
+  /// Tool to support URL context.
   /// </summary>
 
   public record UrlContext {

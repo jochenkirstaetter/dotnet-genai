@@ -47,17 +47,6 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Google Search tool type. Specialized retrieval tool that is powered by Google
-    /// Search.
-    /// </summary>
-    [JsonPropertyName("googleSearch")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GoogleSearch
-        ? GoogleSearch {
-            get; set;
-          }
-
-    /// <summary>
     /// Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by
     /// Google search.
     /// </summary>
@@ -69,33 +58,12 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Enterprise web search tool type. Specialized retrieval tool that is powered by
-    /// Vertex AI Search and Sec4 compliance.
-    /// </summary>
-    [JsonPropertyName("enterpriseWebSearch")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public EnterpriseWebSearch
-        ? EnterpriseWebSearch {
-            get; set;
-          }
-
-    /// <summary>
     /// Optional. Google Maps tool type. Specialized retrieval tool that is powered by Google Maps.
     /// </summary>
     [JsonPropertyName("googleMaps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GoogleMaps
         ? GoogleMaps {
-            get; set;
-          }
-
-    /// <summary>
-    /// Optional. Tool to support URL context retrieval.
-    /// </summary>
-    [JsonPropertyName("urlContext")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public UrlContext
-        ? UrlContext {
             get; set;
           }
 
@@ -117,6 +85,37 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ToolCodeExecution
         ? CodeExecution {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
+    /// compliance. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("enterpriseWebSearch")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public EnterpriseWebSearch
+        ? EnterpriseWebSearch {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+    /// </summary>
+    [JsonPropertyName("googleSearch")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public GoogleSearch
+        ? GoogleSearch {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Tool to support URL context retrieval.
+    /// </summary>
+    [JsonPropertyName("urlContext")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public UrlContext
+        ? UrlContext {
             get; set;
           }
 

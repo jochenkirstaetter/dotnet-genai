@@ -23,27 +23,29 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).
-  /// The start time must be less than or equal to the end time. When the start equals the end time,
-  /// the interval is an empty interval. (matches no time) When both start and end are unspecified,
-  /// the interval matches any time.
+  /// Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end
+  /// (exclusive). The start must be less than or equal to the end. When the start equals the end,
+  /// the interval is empty (matches no time). When both start and end are unspecified, the interval
+  /// matches any time.
   /// </summary>
 
   public record Interval {
     /// <summary>
-    /// The start time of the interval.
-    /// </summary>
-    [JsonPropertyName("startTime")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DateTime ? StartTime { get; set; }
-
-    /// <summary>
-    /// The end time of the interval.
+    /// Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+    /// will have to be before the end.
     /// </summary>
     [JsonPropertyName("endTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DateTime ? EndTime { get; set; }
+
+    /// <summary>
+    /// Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval
+    /// will have to be the same or after the start.
+    /// </summary>
+    [JsonPropertyName("startTime")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public DateTime
-        ? EndTime {
+        ? StartTime {
             get; set;
           }
 
