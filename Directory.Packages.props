@@ -17,6 +17,6 @@
     <PackageVersion Include="System.Collections.Immutable" Version="8.0.0" />
     <PackageVersion Include="Google.Apis.Auth" Version="1.69.0" />
     <PackageVersion Include="NAudio" Version="2.2.1" />
-    <PackageVersion Include="TestServerSdk" Version="0.1.4" />
+    <PackageVersion Include="TestServerSdk" Version="0.1.5" />
   </ItemGroup>
 </Project>
