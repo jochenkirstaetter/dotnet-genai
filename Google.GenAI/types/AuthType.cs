@@ -20,7 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Type of auth scheme.
+  /// Type of auth scheme. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum AuthType {

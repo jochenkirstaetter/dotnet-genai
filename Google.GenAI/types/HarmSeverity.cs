@@ -20,7 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Harm severity levels in the content.
+  /// Output only. Harm severity levels in the content. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmSeverity {

@@ -20,7 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Required. Harm category.
+  /// Harm category.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmCategory {

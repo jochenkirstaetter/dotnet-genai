@@ -20,7 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Required. The harm block threshold.
+  /// The harm block threshold.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmBlockThreshold {

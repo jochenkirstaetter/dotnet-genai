@@ -47,7 +47,7 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
     /// minors are detected in the output image, the threshold of each safety category will be
-    /// overwritten if user sets a lower threshold.
+    /// overwritten if user sets a lower threshold. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("overwrittenThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -77,7 +77,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Harm severity levels in the content.
+    /// Output only. Harm severity levels in the content. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("severity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
