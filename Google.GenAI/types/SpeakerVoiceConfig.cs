@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for the speaker to use.
+  /// The configuration for a single speaker in a multi speaker setup. This data type is not
+  /// supported in Vertex AI.
   /// </summary>
 
   public record SpeakerVoiceConfig {

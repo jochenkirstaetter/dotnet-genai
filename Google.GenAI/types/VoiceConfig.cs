@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record VoiceConfig {
     /// <summary>
-    /// The configuration for the speaker to use.
+    /// The configuration for the prebuilt voice to use.
     /// </summary>
     [JsonPropertyName("prebuiltVoiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
