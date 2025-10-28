@@ -79,12 +79,6 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "finishReason" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "urlContextMetadata" },
-            Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "avgLogprobs" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "avgLogprobs" },
                               Common.GetValueByPath(fromObject, new string[] { "avgLogprobs" }));
@@ -109,6 +103,12 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "safetyRatings" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "safetyRatings" },
                               Common.GetValueByPath(fromObject, new string[] { "safetyRatings" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "urlContextMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }));
       }
 
       return toObject;

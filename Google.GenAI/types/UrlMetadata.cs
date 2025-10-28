@@ -23,12 +23,12 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Context for a single url retrieval.
+  /// Context of the a single url retrieval.
   /// </summary>
 
   public record UrlMetadata {
     /// <summary>
-    /// The URL retrieved by the tool.
+    /// Retrieved url by the tool.
     /// </summary>
     [JsonPropertyName("retrievedUrl")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

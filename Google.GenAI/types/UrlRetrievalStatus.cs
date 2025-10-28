@@ -25,7 +25,7 @@ namespace Google.GenAI.Types {
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum UrlRetrievalStatus {
     /// <summary>
-    /// Default value. This value is unused
+    /// Default value. This value is unused.
     /// </summary>
     [JsonPropertyName("URL_RETRIEVAL_STATUS_UNSPECIFIED")] URL_RETRIEVAL_STATUS_UNSPECIFIED,
 
@@ -40,12 +40,14 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("URL_RETRIEVAL_STATUS_ERROR")] URL_RETRIEVAL_STATUS_ERROR,
 
     /// <summary>
-    /// Url retrieval is failed because the content is behind paywall.
+    /// Url retrieval is failed because the content is behind paywall. This enum value is not
+    /// supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("URL_RETRIEVAL_STATUS_PAYWALL")] URL_RETRIEVAL_STATUS_PAYWALL,
 
     /// <summary>
-    /// Url retrieval is failed because the content is unsafe.
+    /// Url retrieval is failed because the content is unsafe. This enum value is not supported in
+    /// Vertex AI.
     /// </summary>
     [JsonPropertyName("URL_RETRIEVAL_STATUS_UNSAFE")] URL_RETRIEVAL_STATUS_UNSAFE
   }

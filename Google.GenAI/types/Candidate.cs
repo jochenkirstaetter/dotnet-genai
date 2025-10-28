@@ -76,16 +76,6 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Metadata related to url context retrieval tool.
-    /// </summary>
-    [JsonPropertyName("urlContextMetadata")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public UrlContextMetadata
-        ? UrlContextMetadata {
-            get; set;
-          }
-
-    /// <summary>
     /// Output only. Average log probability score of the candidate.
     /// </summary>
     [JsonPropertyName("avgLogprobs")]
@@ -133,6 +123,16 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<SafetyRating>
         ? SafetyRatings {
+            get; set;
+          }
+
+    /// <summary>
+    /// Output only. Metadata related to url context retrieval tool.
+    /// </summary>
+    [JsonPropertyName("urlContextMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public UrlContextMetadata
+        ? UrlContextMetadata {
             get; set;
           }
 

@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record UrlContextMetadata {
     /// <summary>
-    /// List of url context.
+    /// Output only. List of url context.
     /// </summary>
     [JsonPropertyName("urlMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
