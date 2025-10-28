@@ -46,6 +46,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Filter level for safety filtering.
+    /// </summary>
+    [JsonPropertyName("safetyFilterLevel")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SafetyFilterLevel
+        ? SafetyFilterLevel {
+            get; set;
+          }
+
+    /// <summary>
+    /// Allows generation of people by the model.
+    /// </summary>
+    [JsonPropertyName("personGeneration")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PersonGeneration
+        ? PersonGeneration {
+            get; set;
+          }
+
+    /// <summary>
     /// Whether to include a reason for filtered-out images in the response.
     /// </summary>
     [JsonPropertyName("includeRaiReason")]

@@ -1818,6 +1818,18 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "safetyFilterLevel" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "safetySetting" },
+            Common.GetValueByPath(fromObject, new string[] { "safetyFilterLevel" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "personGeneration" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "personGeneration" },
+            Common.GetValueByPath(fromObject, new string[] { "personGeneration" }));
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "includeRaiReason" }) != null) {
         Common.SetValueByPath(
             parentObject, new string[] { "parameters", "includeRaiReason" },
@@ -2415,6 +2427,8 @@ namespace Google.GenAI {
         apiConfig.OutputGcsUri = config.OutputGcsUri;
         apiConfig.OutputMimeType = config.OutputMimeType;
         apiConfig.OutputCompressionQuality = config.OutputCompressionQuality;
+        apiConfig.SafetyFilterLevel = config.SafetyFilterLevel;
+        apiConfig.PersonGeneration = config.PersonGeneration;
         apiConfig.IncludeRaiReason = config.IncludeRaiReason;
         apiConfig.EnhanceInputImage = config.EnhanceInputImage;
         apiConfig.ImagePreservationFactor = config.ImagePreservationFactor;
