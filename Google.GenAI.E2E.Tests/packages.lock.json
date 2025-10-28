@@ -64,9 +64,9 @@
       },
       "TestServerSdk": {
         "type": "Direct",
-        "requested": "[0.1.4, )",
-        "resolved": "0.1.4",
-        "contentHash": "J7C3xYfqsEYl/hP3RUvPXKDH/zosG9HutZ9Aasa0BAW+BO+n/YWQ8UqWXy31i4Eo6pidAaEOBRmgZCyqYyYe7g==",
+        "requested": "[0.1.5, )",
+        "resolved": "0.1.5",
+        "contentHash": "cQZJyJvSn12KSe5yzWDuq+YK1rKLT+ndNdUgmiCN+SmQtQIMy0uGbqhen6i7mKvgdF9K+J62QhvM6bT9TSqlyg==",
         "dependencies": {
           "SharpCompress": "0.29.0",
           "YamlDotNet": "12.0.2"
@@ -1086,9 +1086,9 @@
       },
       "TestServerSdk": {
         "type": "Direct",
-        "requested": "[0.1.4, )",
-        "resolved": "0.1.4",
-        "contentHash": "J7C3xYfqsEYl/hP3RUvPXKDH/zosG9HutZ9Aasa0BAW+BO+n/YWQ8UqWXy31i4Eo6pidAaEOBRmgZCyqYyYe7g==",
+        "requested": "[0.1.5, )",
+        "resolved": "0.1.5",
+        "contentHash": "cQZJyJvSn12KSe5yzWDuq+YK1rKLT+ndNdUgmiCN+SmQtQIMy0uGbqhen6i7mKvgdF9K+J62QhvM6bT9TSqlyg==",
         "dependencies": {
           "SharpCompress": "0.29.0",
           "YamlDotNet": "12.0.2"
