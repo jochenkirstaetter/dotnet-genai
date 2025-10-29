@@ -23,25 +23,25 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Describes how the video in the Part should be used by the model.
+  /// Metadata describes the input video content.
   /// </summary>
 
   public record VideoMetadata {
-    /// <summary>
-    /// The frame rate of the video sent to the model. If not specified, the default value will
-    /// be 1.0. The fps range is (0.0, 24.0].
-    /// </summary>
-    [JsonPropertyName("fps")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double ? Fps { get; set; }
-
     /// <summary>
     /// Optional. The end offset of the video.
     /// </summary>
     [JsonPropertyName("endOffset")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? EndOffset {
+    public string ? EndOffset { get; set; }
+
+    /// <summary>
+    /// Optional. The frame rate of the video sent to the model. If not specified, the default value
+    /// will be 1.0. The fps range is (0.0, 24.0].
+    /// </summary>
+    [JsonPropertyName("fps")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? Fps {
             get; set;
           }
 

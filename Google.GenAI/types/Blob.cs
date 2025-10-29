@@ -28,20 +28,22 @@ namespace Google.GenAI.Types {
 
   public record Blob {
     /// <summary>
-    /// Optional. Display name of the blob. Used to provide a label or filename to distinguish
-    /// blobs. This field is not currently used in the Gemini GenerateContent calls.
-    /// </summary>
-    [JsonPropertyName("displayName")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? DisplayName { get; set; }
-
-    /// <summary>
     /// Raw bytes.
     /// </summary>
     [JsonPropertyName("data")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? Data {
+    public byte[] ? Data { get; set; }
+
+    /// <summary>
+    /// Optional. Display name of the blob. Used to provide a label or filename to distinguish
+    /// blobs. This field is only returned in PromptMessage for prompt management. It is currently
+    /// used in the Gemini GenerateContent calls only when server side tools (code_execution,
+    /// google_search, and url_context) are enabled. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("displayName")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? DisplayName {
             get; set;
           }
 

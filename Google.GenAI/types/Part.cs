@@ -30,63 +30,13 @@ namespace Google.GenAI.Types {
 
   public record Part {
     /// <summary>
-    /// Metadata for a given video.
-    /// </summary>
-    [JsonPropertyName("videoMetadata")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public VideoMetadata ? VideoMetadata { get; set; }
-
-    /// <summary>
-    /// Indicates if the part is thought from the model.
-    /// </summary>
-    [JsonPropertyName("thought")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? Thought {
-            get; set;
-          }
-
-    /// <summary>
-    /// Optional. Inlined bytes data.
-    /// </summary>
-    [JsonPropertyName("inlineData")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Blob
-        ? InlineData {
-            get; set;
-          }
-
-    /// <summary>
-    /// Optional. URI based data.
-    /// </summary>
-    [JsonPropertyName("fileData")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public FileData
-        ? FileData {
-            get; set;
-          }
-
-    /// <summary>
-    /// An opaque signature for the thought so it can be reused in subsequent requests.
-    /// </summary>
-    [JsonPropertyName("thoughtSignature")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ThoughtSignature {
-            get; set;
-          }
-
-    /// <summary>
     /// A predicted [FunctionCall] returned from the model that contains a string representing the
     /// [FunctionDeclaration.name] and a structured JSON object containing the parameters and their
     /// values.
     /// </summary>
     [JsonPropertyName("functionCall")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public FunctionCall
-        ? FunctionCall {
-            get; set;
-          }
+    public FunctionCall ? FunctionCall { get; set; }
 
     /// <summary>
     /// Optional. Result of executing the [ExecutableCode].
@@ -109,6 +59,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. URI based data.
+    /// </summary>
+    [JsonPropertyName("fileData")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public FileData
+        ? FileData {
+            get; set;
+          }
+
+    /// <summary>
     /// Optional. The result output of a [FunctionCall] that contains a string representing the
     /// [FunctionDeclaration.name] and a structured JSON object containing any output from the
     /// function call. It is used as context to the model.
@@ -121,12 +81,53 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Inlined bytes data.
+    /// </summary>
+    [JsonPropertyName("inlineData")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Blob
+        ? InlineData {
+            get; set;
+          }
+
+    /// <summary>
     /// Optional. Text part (can be code).
     /// </summary>
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
         ? Text {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Indicates if the part is thought from the model.
+    /// </summary>
+    [JsonPropertyName("thought")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? Thought {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+    /// </summary>
+    [JsonPropertyName("thoughtSignature")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public byte[]
+        ? ThoughtSignature {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Video metadata. The metadata should only be specified while the video data is
+    /// presented in inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("videoMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VideoMetadata
+        ? VideoMetadata {
             get; set;
           }
 

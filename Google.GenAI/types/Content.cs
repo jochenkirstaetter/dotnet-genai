@@ -37,8 +37,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
-    /// multi-turn conversations, otherwise can be empty. If role is not specified, SDK will
-    /// determine the role.
+    /// multi-turn conversations, otherwise can be left blank or unset.
     /// </summary>
     [JsonPropertyName("role")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

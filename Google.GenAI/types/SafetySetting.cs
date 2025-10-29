@@ -28,19 +28,21 @@ namespace Google.GenAI.Types {
 
   public record SafetySetting {
     /// <summary>
-    /// Determines if the harm block method uses probability or probability and severity scores.
-    /// </summary>
-    [JsonPropertyName("method")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HarmBlockMethod ? Method { get; set; }
-
-    /// <summary>
     /// Harm category.
     /// </summary>
     [JsonPropertyName("category")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HarmCategory
-        ? Category {
+    public HarmCategory ? Category { get; set; }
+
+    /// <summary>
+    /// Optional. Specify if the threshold is used for probability or severity score. If not
+    /// specified, the threshold is used for probability score. This field is not supported in
+    /// Gemini API.
+    /// </summary>
+    [JsonPropertyName("method")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public HarmBlockMethod
+        ? Method {
             get; set;
           }
 

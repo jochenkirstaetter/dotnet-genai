@@ -36,13 +36,13 @@ namespace Google.GenAI {
     internal JsonNode BlobToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "displayName" }))) {
-        throw new NotSupportedException("displayName parameter is not supported in Gemini API.");
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "data" },
                               Common.GetValueByPath(fromObject, new string[] { "data" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "displayName" }))) {
+        throw new NotSupportedException("displayName parameter is not supported in Gemini API.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
@@ -1360,38 +1360,6 @@ namespace Google.GenAI {
     internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "videoMetadata" },
-                              Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thought" },
-                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inlineData" },
-            BlobToMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                            Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
-                        toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "fileData" },
-            FileDataToMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                                Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
-                            toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thoughtSignature" },
-            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "functionCall" },
                               Common.GetValueByPath(fromObject, new string[] { "functionCall" }));
@@ -1408,15 +1376,47 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "executableCode" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "fileData" },
+            FileDataToMldev(JsonNode.Parse(JsonSerializer.Serialize(
+                                Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
+                            toObject));
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "functionResponse" },
             Common.GetValueByPath(fromObject, new string[] { "functionResponse" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "inlineData" },
+            BlobToMldev(JsonNode.Parse(JsonSerializer.Serialize(
+                            Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
+                        toObject));
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "text" },
                               Common.GetValueByPath(fromObject, new string[] { "text" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "thought" },
+                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "thoughtSignature" },
+            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "videoMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }));
       }
 
       return toObject;
@@ -1686,13 +1686,13 @@ namespace Google.GenAI {
     internal JsonNode SafetySettingToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "method" }))) {
-        throw new NotSupportedException("method parameter is not supported in Gemini API.");
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "category" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "category" },
                               Common.GetValueByPath(fromObject, new string[] { "category" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "method" }))) {
+        throw new NotSupportedException("method parameter is not supported in Gemini API.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "threshold" }) != null) {
